@@ -2,19 +2,16 @@
 # Question 8: Find the greatest product of five consecutive digits in the 1000-digit number.
 
 def findLargestConsecutiveProduct ( digits ):
-	currentLargestProduct = 0
+	currentLargestProduct = int(digits[0]) * int(digits[1]) * int(digits[2]) * int(digits[3]) * int(digits[4])
 	latestProduct = 0
-	for x in range(0,996):
-		if x == 0:
-			currentLargestProduct = int(digits[0]) * int(digits[1]) * int(digits[2]) * int(digits[3]) * int(digits[4])
+	for x in range(1,996):
+		# lesson learned here.. edge cases
+		if ( int(digits[x-1]) == 0 or latestProduct == 0 ):
+			latestProduct = int(digits[x]) * int(digits[x+1]) * int(digits[x+2]) * int(digits[x+3]) * int(digits[x+4])
 		else:
-			# lesson learned here.. edge cases
-			if ( int(digits[x-1]) == 0 or latestProduct == 0 ):
-				latestProduct = int(digits[x]) * int(digits[x+1]) * int(digits[x+2]) * int(digits[x+3]) * int(digits[x+4])
-			else:
-				latestProduct = (latestProduct/int(digits[x-1])) * int(digits[x+4])
-			if latestProduct > currentLargestProduct:
-				currentLargestProduct = latestProduct
+			latestProduct = (latestProduct/int(digits[x-1])) * int(digits[x+4])
+		if latestProduct > currentLargestProduct:
+			currentLargestProduct = latestProduct
 	return currentLargestProduct
 
 def main():
