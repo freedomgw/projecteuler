@@ -1,21 +1,22 @@
 # The prime factors of 13195 are 5, 7, 13 and 29.
 # What is the largest prime factor of the number 600851475143 ?
 # answer: 6857
-# computation of 12.4074430466 seconds
+# computation of 8.92887496948 seconds
 
 from math import sqrt,ceil
 import time
 
 def isPrime(prime):
-	if prime == 2:
-		return True
 	for x in range(2,int(ceil(sqrt(prime)))+ 1):
 		if prime % x == 0:
 			return False
 	return True
 
 def findLargestPrime(k):
-	for x in range(int(ceil(sqrt(k)))+ 1,-1,-1):
+	rootk = int(ceil(sqrt(k)))
+	if rootk % 2 == 0:
+		rootk = rootk - 1
+	for x in range(rootk,-1,-2):
 		if isPrime(x):
 			if k % x == 0:
 				return x
