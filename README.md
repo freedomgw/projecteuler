@@ -17,4 +17,6 @@ Question 7: prime_10001.py
 
 Question 8: greatest_product.py
 
+Question 10: summation_of_primes.py
+
 Question 15: lattice_paths.py
