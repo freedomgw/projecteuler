@@ -16,3 +16,5 @@ Question 4: largest_palindrome_product.py
 Question 7: prime_10001.py
 
 Question 8: greatest_product.py
+
+Question 15: lattice_paths.py
