@@ -21,6 +21,8 @@ Question 8: greatest_product.py
 
 Question 10: summation_of_primes.py
 
+Question 12: highly_divisible_triangular_number.py
+
 Question 15: lattice_paths.py
 
 Question 16: power_digit_sum.py
