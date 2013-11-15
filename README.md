@@ -26,3 +26,5 @@ Question 12: highly_divisible_triangular_number.py
 Question 15: lattice_paths.py
 
 Question 16: power_digit_sum.py
+
+Question 25: 1000_digit_fib_number.py
