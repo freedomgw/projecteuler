@@ -30,3 +30,5 @@ Question 16: power_digit_sum.py
 Question 20: factorial_digit_sum.py
 
 Question 25: 1000_digit_fib_number.py
+
+Question 31: coin_sums.py
